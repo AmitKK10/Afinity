@@ -1,0 +1,78 @@
+<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconBlueRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#38bdf8" />
+      <stop offset="35%" stopColor="#0ea5e9" />
+      <stop offset="70%" stopColor="#2563eb" />
+      <stop offset="100%" stopColor="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="iconTealRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#34d399" />
+      <stop offset="40%" stopColor="#10b981" />
+      <stop offset="80%" stopColor="#059669" />
+      <stop offset="100%" stopColor="#047857" />
+    </linearGradient>
+    <linearGradient id="iconGoldRibbon" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#d97706" />
+      <stop offset="40%" stopColor="#f59e0b" />
+      <stop offset="80%" stopColor="#fbbf24" />
+      <stop offset="100%" stopColor="#fef08a" />
+    </linearGradient>
+    <linearGradient id="iconChartBarGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stopColor="#059669" />
+      <stop offset="50%" stopColor="#10b981" />
+      <stop offset="100%" stopColor="#34d399" />
+    </linearGradient>
+    <filter id="iconRibbonShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- The 3D Emblem 'A' Geometry (Surrounding Background Removed for Transparency) -->
+  <g transform="translate(6, 40) scale(1.18)" transform-origin="256 256" filter="url(#iconRibbonShadow)">
+    <!-- 3 Rising Teal Chart Columns -->
+    <rect x="256" y="224" width="18" height="34" rx="4" fill="url(#iconChartBarGrad)" />
+    <rect x="282" y="196" width="18" height="62" rx="4" fill="url(#iconChartBarGrad)" />
+    <rect x="308" y="164" width="18" height="94" rx="4" fill="url(#iconChartBarGrad)" />
+
+    <!-- Right Emerald Ribbon Fold / Leg -->
+    <path
+      d="M256 76
+         L314 186
+         L382 308
+         C389 320 398 328 412 328
+         L434 328
+         C448 328 454 316 446 304
+         L280 76
+         C272 64 264 64 256 76 Z"
+      fill="url(#iconTealRibbon)"
+    />
+
+    <!-- Left Cyan/Electric Blue Ribbon Fold / Leg -->
+    <path
+      d="M256 76
+         L120 304
+         C112 316 118 328 132 328
+         L168 328
+         C182 328 192 320 198 308
+         L256 196
+         L276 156
+         L256 76 Z"
+      fill="url(#iconBlueRibbon)"
+    />
+
+    <!-- Upward Golden Growth Swoosh Ribbon with Arrow Head -->
+    <path
+      d="M136 302
+         C184 286 242 284 312 248
+         C354 226 392 188 412 152
+         L416 194
+         L428 144
+         L378 148
+         L412 152
+         C392 188 354 226 312 248
+         C242 284 184 286 136 302 Z"
+      fill="url(#iconGoldRibbon)"
+    />
+  </g>
+</svg>

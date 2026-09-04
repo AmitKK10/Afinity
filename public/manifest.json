@@ -1,0 +1,85 @@
+{
+  "id": "/?source=pwa",
+  "short_name": "Afinity",
+  "name": "Afinity — Financial Command Center",
+  "description": "Premium personal financial management, multi-ledger tracking, and net-worth analytics PWA.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "window-controls-overlay"],
+  "background_color": "#080c16",
+  "theme_color": "#0a0f1e",
+  "orientation": "portrait-primary",
+  "categories": ["finance", "productivity", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 256x256 384x384 512x512 any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 256x256 384x384 512x512 any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Quick Financial Update",
+      "short_name": "Quick Update",
+      "description": "Record cash flow, update account balance, or log transfer",
+      "url": "/?action=quick_update",
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Accounts & Cash",
+      "short_name": "Accounts",
+      "description": "View bank accounts, fixed deposits & physical cash vaults",
+      "url": "/accounts",
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Investment Portfolio",
+      "short_name": "Investments",
+      "description": "Track stocks, mutual funds, gold & IPO bids",
+      "url": "/investments",
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Credit Cards & Limits",
+      "short_name": "Credit Cards",
+      "description": "Monitor credit card dues, billing dates & shared limits",
+      "url": "/credit",
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}

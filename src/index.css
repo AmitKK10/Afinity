@@ -1,0 +1,363 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Afinity Brand Design Tokens - Dark Titanium (Default) */
+    --color-bg-base: #080c16;
+    --color-bg-surface: #0f172a;
+    --color-bg-elevated: #15203b;
+    --color-bg-card: rgba(15, 23, 42, 0.75);
+    --color-bg-modal: #0f182d;
+    --color-bg-sidebar: #090e1b;
+    --color-bg-input: #0b1222;
+    --color-bg-subtle: rgba(15, 23, 42, 0.6);
+    --color-bg-pill: rgba(30, 41, 59, 0.7);
+
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #64748b;
+    --color-text-dim: #475569;
+
+    --color-border-subtle: rgba(51, 65, 85, 0.4);
+    --color-border-default: #1e293b;
+    --color-border-strong: #334155;
+    --color-border-card: rgba(51, 65, 85, 0.5);
+
+    --color-accent-blue: #3b82f6;
+    --color-accent-cyan: #06b6d4;
+    --color-accent-emerald: #10b981;
+    --color-accent-gold: #f59e0b;
+    --color-accent-coral: #f43f5e;
+    --color-accent-purple: #a855f7;
+
+    --scrollbar-track: rgba(15, 23, 42, 0.6);
+    --scrollbar-thumb: rgba(51, 65, 85, 0.8);
+    --scrollbar-thumb-hover: rgba(100, 116, 139, 0.9);
+
+    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  html.light,
+  html[data-theme="light"],
+  .theme-light {
+    /* Afinity Brand Design Tokens - High-Contrast Light */
+    --color-bg-base: #f1f5f9;
+    --color-bg-surface: #ffffff;
+    --color-bg-elevated: #f8fafc;
+    --color-bg-card: rgba(255, 255, 255, 0.95);
+    --color-bg-modal: #ffffff;
+    --color-bg-sidebar: #ffffff;
+    --color-bg-input: #f8fafc;
+    --color-bg-subtle: rgba(241, 245, 249, 0.9);
+    --color-bg-pill: rgba(226, 232, 240, 0.8);
+
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #334155;
+    --color-text-muted: #64748b;
+    --color-text-dim: #94a3b8;
+
+    --color-border-subtle: #e2e8f0;
+    --color-border-default: #cbd5e1;
+    --color-border-strong: #94a3b8;
+    --color-border-card: #e2e8f0;
+
+    --color-accent-blue: #2563eb;
+    --color-accent-cyan: #0284c7;
+    --color-accent-emerald: #059669;
+    --color-accent-gold: #d97706;
+    --color-accent-coral: #e11d48;
+    --color-accent-purple: #7c3aed;
+
+    --scrollbar-track: #e2e8f0;
+    --scrollbar-thumb: #cbd5e1;
+    --scrollbar-thumb-hover: #94a3b8;
+
+    --card-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    -webkit-tap-highlight-color: transparent;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  /* Numeric tabular figures for aligned financial numbers */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Safe area support for notched phones */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0.5rem);
+}
+
+/* Financial glow utilities */
+.glow-emerald {
+  box-shadow: 0 0 24px -6px rgba(16, 185, 129, 0.25);
+}
+
+.glow-blue {
+  box-shadow: 0 0 24px -6px rgba(59, 130, 246, 0.25);
+}
+
+.glow-gold {
+  box-shadow: 0 0 24px -6px rgba(245, 158, 11, 0.25);
+}
+
+.glow-card {
+  box-shadow: var(--card-shadow);
+}
+
+/* =========================================================================
+   Afinity High-Contrast Light & Dark Theme Design Tokens and Global Styles
+   ========================================================================= */
+
+html.light body,
+html.light #root,
+html.light .bg-\[\#080c16\],
+html.light .bg-\[\#090e1b\],
+html.light .bg-\[\#0a0f1e\],
+html.light .bg-\[\#080d1a\],
+html.light .bg-\[\#050913\],
+html.light .bg-\[\#080c16\]\/90,
+html.light .bg-\[\#0a0f1e\]\/95 {
+  background-color: var(--color-bg-base) !important;
+  color: var(--color-text-primary) !important;
+}
+
+html.light aside,
+html.light #afinity-desktop-sidebar {
+  background-color: #ffffff !important;
+  border-right-color: #e2e8f0 !important;
+}
+
+html.light header,
+html.light #afinity-top-header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light nav,
+html.light #afinity-bottom-nav {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  border-top-color: #e2e8f0 !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Modals & Dialogs in Light Mode */
+html.light .bg-black\/75 {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+}
+
+html.light .bg-\[\#0f182d\],
+html.light .bg-\[\#0f172a\],
+html.light .bg-\[\#15203b\],
+html.light .bg-\[\#141f38\],
+html.light .bg-\[\#141f36\]\/90,
+html.light .bg-slate-900,
+html.light .bg-slate-900\/95,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-950,
+html.light .bg-slate-950\/90,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/50 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-slate-800,
+html.light .bg-slate-800\/90,
+html.light .bg-slate-800\/80,
+html.light .bg-slate-800\/60,
+html.light .bg-slate-800\/50,
+html.light .bg-slate-800\/40,
+html.light .bg-slate-800\/30 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Border Overrides in Light Mode */
+html.light .border-slate-800,
+html.light .border-slate-800\/90,
+html.light .border-slate-800\/80,
+html.light .border-slate-800\/60,
+html.light .border-slate-800\/50,
+html.light .border-slate-700,
+html.light .border-slate-700\/80,
+html.light .border-slate-700\/60,
+html.light .border-slate-700\/50,
+html.light .border-slate-700\/40,
+html.light .border-slate-600,
+html.light .border-slate-600\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Typography Hierarchy in Light Mode (Scoped to protect buttons & credit cards) */
+html.light h1:not([id^="credit-card"]):not([class*="text-white"]),
+html.light h2:not([id^="credit-card"]):not([class*="text-white"]),
+html.light h3:not([id^="credit-card"]):not([class*="text-white"]),
+html.light h4:not([id^="credit-card"]):not([class*="text-white"]),
+html.light h5:not([id^="credit-card"]):not([class*="text-white"]),
+html.light h6:not([id^="credit-card"]):not([class*="text-white"]) {
+  color: #0f172a !important;
+}
+
+/* Specific text utilities in Light Mode */
+html.light .text-slate-100:not([class*="bg-blue"]):not([class*="bg-cyan"]):not([class*="bg-emerald"]):not([class*="bg-rose"]):not([class*="from-"]):not([id^="credit-card"]):not([id^="credit-card"] *),
+html.light .text-slate-200:not([class*="bg-blue"]):not([class*="bg-cyan"]):not([class*="bg-emerald"]):not([class*="bg-rose"]):not([class*="from-"]):not([id^="credit-card"]):not([id^="credit-card"] *) {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-300:not([class*="bg-blue"]):not([class*="bg-cyan"]):not([class*="bg-emerald"]):not([class*="bg-rose"]):not([class*="from-"]):not([id^="credit-card"]):not([id^="credit-card"] *),
+html.light .text-slate-400:not([class*="bg-blue"]):not([class*="bg-cyan"]):not([class*="bg-emerald"]):not([class*="bg-rose"]):not([class*="from-"]):not([id^="credit-card"]):not([id^="credit-card"] *) {
+  color: #475569 !important;
+}
+
+html.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Ensure Primary Action and Accent Buttons Maintain Crisp White Text in Light Mode */
+html.light button[class*="from-blue-600"],
+html.light button[class*="from-cyan-600"],
+html.light button[class*="bg-blue-600"],
+html.light button[class*="bg-cyan-600"],
+html.light button[class*="bg-emerald-600"],
+html.light button[class*="bg-rose-600"],
+html.light button[class*="bg-purple-600"],
+html.light a[class*="from-blue-600"],
+html.light a[class*="from-cyan-600"],
+html.light #sidebar-quick-update-btn,
+html.light #header-quick-update-btn {
+  color: #ffffff !important;
+}
+
+html.light button[class*="from-blue-600"] *,
+html.light button[class*="from-cyan-600"] *,
+html.light button[class*="bg-blue-600"] *,
+html.light button[class*="bg-cyan-600"] *,
+html.light button[class*="bg-emerald-600"] *,
+html.light button[class*="bg-rose-600"] *,
+html.light #sidebar-quick-update-btn *,
+html.light #header-quick-update-btn * {
+  color: #ffffff !important;
+}
+
+/* Inputs, Selects & Textareas in Light Mode */
+html.light input:not([type="checkbox"]):not([type="radio"]),
+html.light select,
+html.light textarea {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input:not([type="checkbox"]):not([type="radio"]):focus,
+html.light select:focus,
+html.light textarea:focus {
+  background-color: #ffffff !important;
+  border-color: #0284c7 !important;
+  outline: 2px solid rgba(2, 132, 199, 0.2) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Light Mode Badges, Chips & Highlights */
+html.light .bg-cyan-950\/60,
+html.light .bg-cyan-950,
+html.light .bg-cyan-950\/50,
+html.light .bg-cyan-500\/10,
+html.light .bg-cyan-500\/15,
+html.light .bg-cyan-500\/20 {
+  background-color: #f0f9ff !important;
+  color: #0284c7 !important;
+  border-color: #bae6fd !important;
+}
+
+html.light .bg-emerald-950\/60,
+html.light .bg-emerald-950,
+html.light .bg-emerald-950\/50,
+html.light .bg-emerald-500\/10,
+html.light .bg-emerald-500\/15,
+html.light .bg-emerald-500\/20 {
+  background-color: #ecfdf5 !important;
+  color: #059669 !important;
+  border-color: #a7f3d0 !important;
+}
+
+html.light .bg-amber-950\/60,
+html.light .bg-amber-950,
+html.light .bg-amber-950\/50,
+html.light .bg-amber-950\/40,
+html.light .bg-amber-500\/10,
+html.light .bg-amber-500\/15,
+html.light .bg-amber-500\/20 {
+  background-color: #fffbeb !important;
+  color: #d97706 !important;
+  border-color: #fde68a !important;
+}
+
+html.light .bg-rose-950\/60,
+html.light .bg-rose-950,
+html.light .bg-rose-950\/50,
+html.light .bg-rose-950\/40,
+html.light .bg-rose-500\/10,
+html.light .bg-rose-500\/15,
+html.light .bg-rose-500\/20 {
+  background-color: #fff1f2 !important;
+  color: #e11d48 !important;
+  border-color: #fecdd3 !important;
+}
+
+html.light .bg-purple-950\/60,
+html.light .bg-purple-950,
+html.light .bg-purple-950\/50,
+html.light .bg-purple-500\/10,
+html.light .bg-purple-500\/15,
+html.light .bg-purple-500\/20 {
+  background-color: #f5f3ff !important;
+  color: #7c3aed !important;
+  border-color: #ddd6fe !important;
+}

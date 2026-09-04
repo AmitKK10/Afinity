@@ -1,0 +1,6 @@
+{
+  "name": "Afinity",
+  "description": "A premium personal financial command center and net-worth tracking PWA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
